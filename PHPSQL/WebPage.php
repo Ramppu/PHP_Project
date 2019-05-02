@@ -8,18 +8,20 @@
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<?php
+<div class="nope">
+<?php   
 require 'Config.php';
 session_start();
 
 if (isset($_SESSION['userid'])) {
-        echo "Welcome User!";
-        Echo "<a href=login/Logout.php>Logout</a>";
+        echo "Welcome " .$_SESSION['uname'];
+        Echo "<a href=login/Logout.php> Logout</a>";
 }
 else {
         echo "Please Sign up!";
 }
 ?>
+</div>
 </head>
         <body>
 
@@ -42,11 +44,13 @@ else {
                         <h1><b>LISSEN</b></h1>       
                 </div>
 
-                <div class="Search">
-                        <form action ="result.php" method="POST">
-                         <input type="text" placeholder="Search for upcoming albums" name="query">
-                         <input type="submit" value="Search">
+                  <form action ="result.php" method="POST" autocomplete="off">
+                                <label>
+                                        <input type="text" placeholder="Search for upcoming albums" name="query">
+                                </label>
+                                <label>
+                                        <input type="submit" value="Search">
+                                </label>
                         </form>
-                </div>
         </body>
 </html>
