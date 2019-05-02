@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gelor | Search for Albums</title>
+<title>Lissen | Search for Albums</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -17,19 +17,19 @@ if(isset($_SESSION['login_user'])){
 ?>
 </head>
 <body>
-<div class="Header">
-     <h1><a href="../WebPage.php">Lissen</a></h1>      
+<div class="Header2">
+     <h2><a href="../WebPage.php">Lissen</a></h2>      
 </div>
- 
- <form action="LoginConfirm.php" method="POST">
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
+  
+ <form action="LoginConfirm.php" method="POST" autocomplete="off">
+    <label for="uname">
     <input type="text" placeholder="Enter Username" name="uname" required>
+    </label>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="psw">
     <input type="password" placeholder="Enter Password" name="psw" required>
-
+    </label>
+    <br>
     <button type="submit" value = "Login">Login</button>
-  </div>
 </form> 
 </body>
