@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gelor | Search for Albums</title>
+<title>Lissen | Search for Albums</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/mystyletwo.css">
+<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <?php
@@ -13,9 +13,10 @@ require '../Config.php';
 ?>
 </head>
 <body>
-    <div class="Header">
-     <h1><a href="../WebPage.php">Lissen</a></h1>      
+    <div class="Header2">
+     <h2><a href="../WebPage.php">Lissen</a></h2>      
     </div>
+<div id="php">
 <?php
 if (isset($_POST["query"])) {
         $query = $_POST['query']; 
@@ -37,24 +38,29 @@ if (isset($_POST["query"])) {
                     
                     print("<td> 
                     <form action=\"editConfirm.php\" method=\"GET\">
+                        <label>
                         <input type=\"hidden\" value=\"".$results['albumName']."\" name =\"album\" >
-                        <input type=\"text\" value=\"\" name =\"info\" >
+                        </label>
+                        <label>
+                        <input type=\"text\" value=\"\" name =\"info\" placeholder=\"Edit the info\">
+                        </label>
+                        <label>
                         <input type=\"submit\" name=\"toedit\" value=\"Submit\" >
+                        </label>
                     </form>
                     </td>");
                 }
                 
             }
             else{ // if there is no matching rows do following
-                echo "Album with that name Doest not exist.";
+                echo "Album with that name Doesn't exist.";
             }       
 }
 else {
     echo "Virhe bois";
 }
 ?>
-
-
-
+</div>
+    
 </body>
 </html>
