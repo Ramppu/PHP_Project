@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gelor | Search for Albums</title>
+<title>Lissen | Search for Albums</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,6 +13,10 @@ require 'Config.php';
 ?>
 </head>
 <body>
+ <div class="Header2">
+     <h2><a href="WebPage.php">Lissen</a></h2>      
+</div> 
+<div id="serc">
 <?php
 if (isset($_POST["query"])) {
         $query = $_POST['query']; 
@@ -29,8 +33,9 @@ if (isset($_POST["query"])) {
                 while($results = mysqli_fetch_array($raw_results)){
                 // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
                 
-                    echo "<p><h3>".$results['releaseDate']."</h3>"."Is the release date of ".$results['albumName']."</p>";
-                    // posts results gotten from database(title and text) you can also show id ($results['id'])
+                    echo "<p><h3>".$results['releaseDate']."</h3>"."Is the release date of ".$results['albumName']." by ".$results['artistName']."</p>";
+                    echo "<p>".$results['info']."</p>";
+                    echo "<br><br>";                    // posts results gotten from database(title and text) you can also show id ($results['id'])
                 }
                 
             }
@@ -42,7 +47,7 @@ else {
     echo "Virhe bois";
 }
 ?>
-
+</div>
 
 
 </body>
