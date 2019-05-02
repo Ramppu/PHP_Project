@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gelor | Search for Albums</title>
+<title>Lissen | Search for Albums</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -38,7 +38,7 @@ session_start();
             if ($row['userName'] == $Username && $row['userPassword'] == $Password) {
                 $_SESSION['userid'] = $row['userID'];
                 $_SESSION['uname'] = $Username;
-                echo "Login Succesfull! Welcome " .$row['userName'];
+                header("Location: ../WebPage.php"); // Redirecting To Home Page
             }
             else {
                 echo "Failed to login.";
@@ -48,5 +48,4 @@ session_start();
             echo "Virhe Bois";
         }
 ?>
-<A HREF = "../WebPage.php">Back To The Main Page</A>
 </body>
