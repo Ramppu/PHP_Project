@@ -51,7 +51,6 @@ else  {
     }
 
     else {
-        echo "Artist Doesn't Exist.";
         mysqli_select_db($conn,'localdb');
         $retval = mysqli_query($conn,$sql);
         $yeetval = mysqli_query($conn,$sql1);
