@@ -33,7 +33,7 @@ if (isset($_POST["query"])) {
                 while($results = mysqli_fetch_array($raw_results)){
                 // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
                 
-                    echo "<p><h3>".$results['info']."</h3>"."Is the info of ".$results['albumName'].". Edit it from below."."</p>";
+                    echo "<p><h3>".$results['info']."</h3>"."Is the info of ".$results['albumName']."."</p>";
                     // posts results gotten from database(title and text) you can also show id ($results['id'])
                     
                     print("<td> 
