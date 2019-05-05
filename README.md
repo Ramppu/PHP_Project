@@ -7,3 +7,12 @@ If the album given was incorrect, the user can delete the album from the system.
 A registration form and login is provided on the webpage.
 
 It's designed to be easy and simple to use. 
+
+# DEPLOYMENT
+
+The website is hosted through Azure, so there shouldn't be need for any deployment. Link to the page https://1800692.azurewebsites.net/PHPSQL/WebPage.php 
+IF you want to deploy the page through localhost, contact me ??????
+
+# NOTE
+
+The login system was implemented only to meet requirements regarding the finished project. We advise you not to insert real emails or passwords into the database for security reasons. 
