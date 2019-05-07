@@ -11,7 +11,7 @@ It's designed to be easy and simple to use.
 # DEPLOYMENT
 
 The website is hosted through Azure, so there shouldn't be need for any deployment. Link to the page https://1800692.azurewebsites.net/PHPSQL/WebPage.php 
-IF you want to deploy the page through localhost, contact me ??????
+IF you want to deploy the page through localhost, Download it here: https://github.com/alketaademaj/php-sql Have Xampp installed on your computer and put it inside the htdocs file. C:\xampp\htdocs. Open the page through localhost.
 
 # NOTE
 
