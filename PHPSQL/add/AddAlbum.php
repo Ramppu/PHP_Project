@@ -10,8 +10,9 @@
 <body>
 
 <div class="Header2">
-     <h2><a href="../WebPage.php">Lissen</a></h2>      
+     <h2><a href="../WebPage.php">Lissen</a></h2>
 </div>
+     
 <form action="albumconfirm.php" method="get" autocomplete = "off">
     <label for = "Artist">
          <input type="text" placeholder="Artist" name="Artist">
